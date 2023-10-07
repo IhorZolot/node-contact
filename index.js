@@ -1,5 +1,5 @@
+import { program } from 'commander'
 import * as contactList from './contacts.js'
-// const argv = require('yargs').argv
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
 	switch (action) {
@@ -23,6 +23,17 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
 	}
 }
 
+program
+	.option('-a, --action <type>', 'choose action')
+	.option('-i, --id <type>', 'user id')
+	.option('-n, --name <type>', 'user name')
+	.option('-e, --email <type>', 'user email')
+	.option('-p, --phone <type>', 'user phone')
+
+program.parse()
+const options = program.opts()
+invokeAction(options)
+
 // invokeAction({ action: 'list' })
 // invokeAction({ action: 'get', id: 'qdggE76Jtbfd9eWJHrssH' })
 // invokeAction({ action: 'add', name: 'Chaim Lewis', email: 'dui.in@egetlacus.ca', phone: '(294) 840-6685' })
@@ -33,7 +44,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
 // 	email: 'dui.in@egetlacus.ca',
 // 	phone: '(294) 840-2222',
 // })
-invokeAction({
-	action: 'remove',
-	id: 'l969A7ubrNEvY09P7ZPxv',
-})
+// invokeAction({
+// 	action: 'remove',
+// 	id: 'l969A7ubrNEvY09P7ZPxv',
+// })
