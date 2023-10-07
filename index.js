@@ -33,18 +33,3 @@ program
 program.parse()
 const options = program.opts()
 invokeAction(options)
-
-// invokeAction({ action: 'list' })
-// invokeAction({ action: 'get', id: 'qdggE76Jtbfd9eWJHrssH' })
-// invokeAction({ action: 'add', name: 'Chaim Lewis', email: 'dui.in@egetlacus.ca', phone: '(294) 840-6685' })
-// invokeAction({
-// 	action: 'update',
-// 	id: 'MjmAJNcygsWywfDlITXbJ',
-// 	name: 'Chaim Lewis',
-// 	email: 'dui.in@egetlacus.ca',
-// 	phone: '(294) 840-2222',
-// })
-// invokeAction({
-// 	action: 'remove',
-// 	id: 'l969A7ubrNEvY09P7ZPxv',
-// })
